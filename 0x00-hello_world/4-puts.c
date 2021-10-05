@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- *main - Is where the program start its execution.
+ *main - where program Init the x.
  *
  * Return:  always 0
  */
