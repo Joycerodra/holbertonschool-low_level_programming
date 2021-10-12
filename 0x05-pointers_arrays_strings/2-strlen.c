@@ -5,16 +5,15 @@
  * @s: pointer
  *
  * Description: This function that returns the length of a string.
- * Return: the length of the string
+ * Return: i
  */
 int _strlen(char *s)
 {
 	int i = 0;
 
-	while (*s != '\0')
+	while (s[i] != '\0')
 	{
 		i++;
-		s++;
 	}
 
 	return (i);
