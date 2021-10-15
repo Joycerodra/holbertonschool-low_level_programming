@@ -3,29 +3,36 @@
 /**
  * leet - Encodes a string into 1337.
  *
-* @m: String.
+* @a: String.
  *
 * Return: String in 1337.
  */
 
-char *leet(char *m)
+char *leet(char *a)
 {
-	int i, j;
-	char p[] = {'A', 'a', 'E', 'e', 'O', 'o', 'T', 't', 'L', 'l'};
-	char q[] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'};
 
-	for (i = 0; m[i] != '\0'; i++)
+	int j = 0;
+	int i;
+
+	char let[] = {"aeotlAEOTL"};
+	char sim[] = {"4307143071"};
+
+while (a[j] != '\0')
+{
+	for (i = 0; let[i] != '\0'; i++)
 	{
-		for (j = 0; p[j] != '\0'; j++)
+		if (a[j] == let[i])
 		{
-			if (m[i] == p[j])
-			{
-				m[i] = q[j];
-			}
-
+			a[j] = sim[i];
+			break;
 		}
 
 	}
-	return (m);
+
+	j++;
+
+}
+
+return (a);
 
 }
