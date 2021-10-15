@@ -26,6 +26,6 @@ char *leet(char *m)
 		}
 
 	}
-	return (s);
+	return (m);
 
 }
