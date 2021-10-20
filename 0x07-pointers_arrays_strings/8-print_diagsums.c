@@ -1,26 +1,20 @@
 #include "main.h"
-
+#include <stdio.h>
 
 /**
  * print_diagsums - this function prints diagonal sums.
  * @a: pointer
  * @size: column size
  */
-
 void print_diagsums(int *a, int size)
 {
+	int b;
+	int n1 = 0, n2 = 0;
 
-	int i, j = 0;
-
-		for (i = 0; i < size; i++)
+	for (b = 0; b < size; b++)
 	{
-		for (j = 0; j < size; j++)
-		{
-			if (i == j)
-				i += a[i]*a[j];
-
-			if ((i + j) == (size - 1))
-				j += a[i]*a[j];
-		}
+		n1 = n1 + a[b + (b * size)];
+		n2 = n2 + a[(size * (b + 1)) - (b + 1)];
 	}
+	printf("%d, %d\n", n1, n2);
 }
